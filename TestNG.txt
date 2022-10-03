@@ -1,0 +1,112 @@
+Type Of Different Testing:
+Unit Testing --> Dev team
+System Testing/Componenet Testing --> Dev Team helped by QA Team (Testing Team)
+System Integration Testing --> Testing Team
+Unit Acceptance Testing --> QA Team (Testing Team)
+
+Testing module:
+JUNIT, TestNG, Unit Testing, Mocking Using Mockito, Test Strategy and Test Planning
+
+
+TestNG:
+Normal Examples - System.out.println
+Real life Examples - Automation code
+Practical Examples
+-----------------------
+TestNG is a Unit Testing Framework inspired by JUNIT and NUNIT by adding New Functionalities which made TestNG more Powerfull for Unit testing and Integration Testing.
+
+Advantages Of TestNG:
+1. Control Over the Test Case Execution Order
+       Needs: 500 test Cases --> all of Test Cases in Single Click
+              around 250 test Cases -->
+              open Browser Tests, Login Tests, SignIN tests, Close Browser Tests, 
+              Regression testing, Smoke Testing
+               25000 Test Cases , 5000/6000 Test Cases
+2. Run Test Cases in Group
+3. Detailed HTML Reports
+4. Supports Parameterizing Test Cases
+5. Run Test Cases Serially as well as paralelly
+6. Different Annotations (@Test, @beforeTest, @afterTest, @BeforeClass, @afterClass, @BeforeMethod, @afterMethod, @BeforeSuite, @afterSuite etc.)
+7. Helper Attributes (priority, Order, dependsOnMethods, InvocationCount, AlwaysRun etc.) --> Open Browser, Login, Close Browser
+
+
+Done:
+1. How to Install TestNg plugin
+2. How to add TestNg plugin in our Project
+3. @Test annotations
+4. Helper attributes
+     priority, dependsonMethods, alwaysrun, enabled, invocationCount
+5. TestNg.xml file 
+     How to generate TestNg.xml file --> right Click on the project-> Hover the mouse on TestNg -> Click on "Convert to TestNg" option
+6. Use of include/exclude tags
+7. Annotations (@Test, @beforeTest, @afterTest, @BeforeClass, @afterClass, @BeforeMethod, @afterMethod, @BeforeSuite, @afterSuite etc.)
+   order OF Annotations:
+     BeforeSuite --> BeforeTest --> BeforeClass --> BeforeMethod --> Test --> AfterMethod --> AfterClass --> AfterTest --> AfterSuite
+8. Regex Matching is Applicable Only for Methods Name. It can not be used for Class name and Package Name.
+9. Assertions - AssertEquals, AssertTrue, AssertFalse
+
+----------------------------------------------------------------------------------------------------------------------
+=======================================================================================================================
+
+Day 2 topics:
+10. Parameterization of the Test Cases
+   parameterization is possible on two levels either on Test level or on the class level. When it is declared on Test level then it is available to 
+all the classes inside that test folder. if it is declared on Class level then it is available only for that class.
+
+11. Data provider Annotations --> The return type of Data provider is always Two Dimesional Array of 'Object' type.
+
+12. DataproviderClass Annotations --> If the DataProvider is in Another Class then The information of that DataProvider passed to that Test Case 
+using DataProviderClass Annotations.
+
+13. Run Test Cases parallely -->  
+parallel On tests lavels: <suite name="Suite" parallel="tests" thread-count="2">
+parallel on Class levels: <suite name="Suite"  parallel="classes" thread-count="2" >
+parallel on Methods levels: <suite name="Suite" parallel="methods" thread-count="2">
+17765 ms Serially, 11975 ms
+13639 ms-49425110671
+17813 ms-3
+22935 ms-2
+33663 ms-1
+
+14. Listeners --> Responsible for taking some Actions when certain things are happening
+           OnTestStart--> when the Test is starting  I want One message should be print in the console that The test has been started.
+           OnTestSuccess --> I want One message should be print in the console that The test has been successfully passed.
+           OnTestfailure --> I want One message should be print in the console that The test has been failed.
+
+Listeners will be a class which informed at RunTime when test begins, finishes, skips, passes or fails.
+Use OF Listeners: The TEst case is getting failed. Screenshot of that screen where my test case is getting failed
+
+IAnnotationTransformer (doc, javadoc)
+IAnnotationTransformer2 (doc, javadoc)
+IHookable (doc, javadoc)
+IInvokedMethodListener (doc, javadoc)
+IMethodInterceptor (doc, javadoc)
+IReporter (doc, javadoc)
+ISuiteListener (doc, javadoc)
+ITestListener (doc, javadoc) -- Most Commonly Used
+
+
+15. Grouping of the Test Cases: (@BeforeGroups(groups="smoke") & @AfterGroups(groups="smoke"))
+
+16. Reporting: Run the Test Suite and then Refresh the project. test-output Folder will be generated and then we can look for "emailable-report.html" file/Report.
+
+17. In case of Failed Test case, TestNG-failed.xml file generated which is having detailes of all failed and skipped Test Cases which help the user to run again 
+Failed and skipped Test cases only.
+
+
+---------------------------------------
+
+Need OF Mocking:
+
+Write a code: User will provide all Details of Traveller and click on Book Ticket then ticket should be booked and PNR number should be generated.
+
+Unit tests: Your Code is working absolutely Fine but the internet is not available in your system. I have to Make my test case independent of internet through Mocking
+
+
+
+
+
+
+
+
+
